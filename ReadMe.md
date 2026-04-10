@@ -31,3 +31,9 @@ npx playwright test --headed --reporter=html
 
 # Open the last generated Playwright HTML report in the browser
 npx playwright show-report
+
+# show the trace
+npx playwright show-trace trace.zip
+
+# Run in debug mode
+npx playwright test --grep @sanity --debug

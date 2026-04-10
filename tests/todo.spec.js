@@ -21,4 +21,5 @@ test('test to-do app @sanity', async ({ page }) => {
   await expect(page.getByTestId('todo-list')).toContainText('Rest');
   await page.getByRole('button', { name: 'Clear completed' }).click();
   await page.getByRole('link', { name: 'All' }).click();
+  await expect(page.locator('.todo-list')).toHaveCount(1);
 });
